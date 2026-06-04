@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ## Problem Statement 
 Predicting daily mushroom yield (kg) in a climate-controlled polyhouse using real-world sensor 
 readings for temperature (°C), relative humidity (%), and CO₂ (ppm). This repository serves as a 
