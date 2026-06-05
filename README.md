@@ -267,6 +267,74 @@ mushroom-yield-predictor/
 * `data/interim/02_cleaned.parquet`
 * `docs/cleaning_log.md`
 
+## Data Quality Analysis
+
+A data quality assessment was performed on the cleaned polyhouse sensor dataset.
+
+### Outputs
+
+* `src/data_quality.py` – Generates the data quality report.
+* `reports/data_quality.md` – Contains summary statistics, date range, observation count, and key insights.
+
+### Metrics Evaluated
+
+* Temperature (`temperature_c`)
+* Humidity (`humidity_pct`)
+* CO₂ (`co2_ppm`)
+* Yield (`yield_kg`)
+
+### Key Checks
+
+* Summary statistics (`describe()`)
+* Date range and observation count
+* Mean vs. median comparison to identify skew
+* Data quality insights documented in a readable report
+
+
+## Project Structure
+
+```text
+mushroom-yield-predictor/
+│
+├── data/
+│   ├── raw/
+│   │   ├── .gitkeep
+│   │   └── polyhouse_sensors.csv
+│   │
+│   ├── interim/
+│   │   ├── 01_loaded.csv
+│   │   └── 02_cleaned.parquet
+│   │
+│   └── processed/
+│       └── .gitkeep
+│
+├── docs/
+│   └── cleaning_log.md
+│
+├── models/
+│
+├── notebooks/
+│   ├── .gitkeep
+│   └── smoke_test.py
+│
+├── reports/
+│   └── data_quality.md
+│
+├── src/
+│   ├── generate_data.py
+│   ├── ingest.py
+│   ├── clean_data.py
+│   ├── data_quality.py
+│   └── smoke_test.py
+│
+├── .gitignore
+├── README.md
+└── requirements.txt
+```
+
+
+
+
 
 
 
