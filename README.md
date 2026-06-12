@@ -965,3 +965,42 @@ Output:
 ```bash
 python src/Random_Forest.py
 ```
+
+
+
+## Time Series Cross Validation
+
+### Objective
+
+Evaluate model stability using TimeSeriesSplit cross-validation on training data.
+
+### Method
+
+- TimeSeriesSplit with 5 folds.
+- Only training data used.
+- No test data included during cross-validation.
+
+### Models Evaluated
+
+- Linear Regression
+- Random Forest Regressor
+
+### Metric
+
+Mean Absolute Error (MAE)
+
+### Outputs
+
+- reports/cv_results.md
+
+### Execution
+
+```bash
+python src/cv_reports.py
+```
+
+### Interpretation
+
+- Lower MAE indicates better predictive accuracy.
+- Lower standard deviation indicates more consistent performance across folds.
+- CV results are compared against hold-out test metrics to identify potential overfitting.
